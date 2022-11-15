@@ -18,7 +18,12 @@ namespace TRexRunner
 
         protected override void Initialize()
         {
-            // TODO: Add your initialization logic here
+            // Set window size to devcade screen size
+            _graphics.PreferredBackBufferWidth = GraphicsDevice.DisplayMode.Width;
+            _graphics.PreferredBackBufferHeight = GraphicsDevice.DisplayMode.Height;
+
+            _graphics.IsFullScreen = true;
+            _graphics.ApplyChanges();
 
             base.Initialize();
         }
